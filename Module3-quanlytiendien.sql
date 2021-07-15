@@ -19,8 +19,8 @@ gia int
 
 create table chiso(
 makh int not null primary key,
-chisocuoi int,
 chisodau int,
+chisocuoi int,
 maloai int,
 foreign key (makh) references khachhang(makh),
 foreign key (maloai) references dongia(maloai)
