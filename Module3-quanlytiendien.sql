@@ -68,14 +68,14 @@ select * from khachhang where ngaysinh like "%1980%" ;
 select k.*, c.chisocuoi-c.chisodau as "chisotieuthu" from khachhang k join chiso c 
 on k.makh = c.makh;
 
-select k.*, c.chisocuoi-c.chisodau as "so dien tieu thu" from khachhang k inner join chiso c, dongia d
+select *, c.chisocuoi-c.chisodau as "so dien tieu thu" from khachhang k inner join chiso c, dongia d
 where k.makh = c.makh;
 
 select k.* from khachhang k, chiso c, dongia
 where k.makh = c.makh and c.chisocuoi-c.chisodau >1;
 
 select tenkh,loaiho,c.chisocuoi-c.chisodau as "chi so tieu thu",(c.chisocuoi-c.chisodau)*d.gia as "so tien phai tra" from khachhang k, chiso c, dongia d
-where k.makh = c.makh and c.chisocuoi >1;
+where k.makh = c.makh and c.chisocuoi-c.chisodau >1;
 
 select k.*, loaiho from khachhang k, chiso c, dongia d
 where k.makh = c.makh and d.loaiho = "Gia dinh";
