@@ -1,4 +1,4 @@
-create database quanlytiendien;
+create database quanlytiendien CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 use quanlytiendien;
 
