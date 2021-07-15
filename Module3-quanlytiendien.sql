@@ -19,7 +19,7 @@ gia int
 
 create table chiso(
 makh int not null primary key,
-chisodau int,
+chisocuoi int,
 chisodau int,
 maloai int,
 foreign key (makh) references khachhang(makh),
@@ -59,16 +59,16 @@ value (4,0,18,1);
 insert into chiso
 value (5,0,1,1);
 
-delete from chiso where makh;
-delete from khachhang where makh;
-delete from dongia where maloai;
+-- delete from chiso where makh;
+-- delete from khachhang where makh;
+-- delete from dongia where maloai;
 
 select * from khachhang;
 select * from khachhang where ngaysinh like "%1980%" ;
 select k.*, c.chisocuoi-c.chisodau as "chisotieuthu" from khachhang k join chiso c 
 on k.makh = c.makh;
 
-select k.*, c.chisodau, c.chisocuoi, d.loaiho ,d.gia , c.chisocuoi-c.chisodau as "so dien tieu thu" from khachhang k inner join chiso c, dongia d
+select k.*, c.chisocuoi-c.chisodau as "so dien tieu thu" from khachhang k inner join chiso c, dongia d
 where k.makh = c.makh;
 
 select k.* from khachhang k, chiso c, dongia
