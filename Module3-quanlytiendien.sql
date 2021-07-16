@@ -5,7 +5,7 @@ use quanlytiendien;
 create table khachhang(
 makh int not null primary key,
 tenkh nvarchar(45),
-ngaysinh nvarchar(45),
+ngaysinh datetime,
 diachi nvarchar(45),
 dienthoai nvarchar(45),
 ghichu nvarchar(45)
@@ -27,19 +27,19 @@ foreign key (maloai) references dongia(maloai)
 );
 
 insert into khachhang
-value (1,"tung","18-5-1980","hanoi",1,1);
+value (1,"huy","1998-05-18","hanoi",1,1);
 
 insert into khachhang
-value (2,"tuan","27-09-1980","hanoi",1,1);
+value (2,"tuan","1980-04-16","hanoi",1,1);
 
 insert into khachhang
-value (3,"hoang","15-02-1990","hanoi",1,1);
+value (3,"hoang","1980-01-15","hanoi",1,1);
 
 insert into khachhang
-value (4,"linh","25-3-1990","hanoi",1,1);
+value (4,"linh","1990-08-13","hanoi",1,1);
 
 insert into khachhang
-value (5,"toan","27-3-1995","hanoi",1,1);
+value (5,"toan","1990-06-11","hanoi",1,1);
 
 insert into dongia
 value(1,"Gia dinh",5000);
