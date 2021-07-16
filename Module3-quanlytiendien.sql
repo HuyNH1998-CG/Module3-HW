@@ -5,7 +5,7 @@ use quanlytiendien;
 create table khachhang(
 makh int not null primary key,
 tenkh nvarchar(45),
-ngaysinh datetime,
+ngaysinh date,
 diachi nvarchar(45),
 dienthoai nvarchar(45),
 ghichu nvarchar(45)
